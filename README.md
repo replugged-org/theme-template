@@ -17,7 +17,7 @@
 5. Reload Discord to load the theme
 
 The unmodified theme replaces the Discord font with the old Whitney font. Credit to
-[@Overimagine](https://github.com/Overimagine) for the snippet!
+[@overimagine1](https://github.com/overimagine1) for the snippet!
 
 ## Development
 
