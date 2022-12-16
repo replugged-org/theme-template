@@ -1,6 +1,6 @@
-# Replugged plugin template
+# Replugged theme template
 
-[Use this template](https://github.com/replugged-org/plugin-template/generate)
+[Use this template](https://github.com/replugged-org/theme-template/generate)
 
 ## Prerequisites
 
@@ -10,22 +10,22 @@
 
 ## Install
 
-1. [Create a copy of this template](https://github.com/replugged-org/plugin-template/generate)
+1. [Create a copy of this template](https://github.com/replugged-org/theme-template/generate)
 2. Clone your new repository and cd into it
 3. Install dependencies: `pnpm i`
-4. Build the plugin: `pnpm run build`
-5. Reload Discord to load the plugin
+4. Build the theme: `pnpm run build`
+5. Reload Discord to load the theme
 
-The unmodified plugin will log "Typing prevented" in the console when you start typing in any
-channel.
+The unmodified theme replaces the Discord font with the old Whitney font. Credit to
+[@Overimagine](https://github.com/Overimagine) for the snippet!
 
 ## Development
 
 The code must be rebuilt after every change. You can use `pnpm run watch` to automatically rebuild
-the plugin when you save a file.
+the theme when you save a file.
 
-Building using the script above will automatically install the updated version of the plugin in
-Replugged. You can find the plugin folder directories for your OS
+Building using the script above will automatically install the updated version of the theme in
+Replugged. You can find the theme folder directories for your OS
 [here](https://github.com/replugged-org/replugged#installing-plugins-and-themes).  
 If you don't want to install the updated version, set the `NO_INSTALL` environment variable with any
 value: `NO_INSTALL=true pnpm run build`.
@@ -37,8 +37,8 @@ API docs coming soon(tm)
 
 ## Distribution
 
-For plugin distribution, Replugged uses bundled `.asar` files. Bundled plugins can be installed to
-the same plugin folder as listed above.
+For theme distribution, Replugged uses bundled `.asar` files. Bundled themes can be installed to the
+same theme folder as listed above.
 
 This repository includes a GitHub workflow to compile and publish a release with the asar file. To
 trigger it, create a tag with the version number preceded by a `v` (e.g. `v1.0.0`) and push it to
@@ -62,15 +62,10 @@ Open Discord settings and make sure the Replugged tab is there. If not,
 [follow these instructions](https://github.com/replugged-org/replugged#installation) to install
 Replugged.
 
-### Make sure the plugin is installed.
+### Make sure the theme is installed.
 
-Check the [plugin folder](https://github.com/replugged-org/replugged#installing-plugins-and-themes)
-for your OS and make sure the plugin is there. If not, make sure you have built the plugin and that
+Check the [theme folder](https://github.com/replugged-org/replugged#installing-plugins-and-themes)
+for your OS and make sure the theme is there. If not, make sure you have built the theme and that
 the `NO_INSTALL` environment variable is not set.  
-You can run `replugged.plugins.list().then(console.log)` in the console to see a list of plugins in
-the plugin folder.
-
-### Make sure the plugin is running.
-
-Check the console for a message saying `[Replugged:Plugin:Plugin Template] Plugin started`. If you
-don't see it, try reloading Discord. If that doesn't work, check for any errors in the console.
+You can run `replugged.themes.list().then(console.log)` in the console to see a list of themes in
+the theme folder.
