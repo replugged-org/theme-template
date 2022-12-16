@@ -8,7 +8,7 @@ specifiers:
   '@types/node': ^18.11.15
   parcel: ^2.8.2
   prettier: ^2.8.1
-  replugged: 4.0.0-beta0.16
+  replugged: 4.0.0-beta0.17
 
 devDependencies:
   '@electron/asar': 3.2.1
@@ -18,7 +18,7 @@ devDependencies:
   '@types/node': 18.11.15
   parcel: 2.8.2
   prettier: 2.8.1
-  replugged: 4.0.0-beta0.16
+  replugged: 4.0.0-beta0.17
 
 packages:
 
@@ -1708,8 +1708,8 @@ packages:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
     dev: true
 
-  /replugged/4.0.0-beta0.16:
-    resolution: {integrity: sha512-elwEjSKaok47oTNk3nEM82yTuzGEVwqq8A598tlhselyFpSanJ7gQko458zWYJUNaMCIR0ctf+0y8irTVCDeYg==}
+  /replugged/4.0.0-beta0.17:
+    resolution: {integrity: sha512-x/9uuEOP6swObrTzLp74NquJnHn99NRInTmL/JG3+itSiwDFVmVObZGcXCq5WXo3Uu/G/1sqoMC+OhrN27+fkQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       react: 18.2.0
