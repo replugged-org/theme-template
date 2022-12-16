@@ -6,8 +6,8 @@ import { join } from "path";
 
 const manifest: Theme = _manifest;
 
-const main = manifest.main || "main.css";
-const splash = manifest.splash || (existsSync("splash.css") ? "splash.css" : undefined);
+const main = manifest.main || "src/main.css";
+const splash = manifest.splash || (existsSync("src/splash.css") ? "src/splash.css" : undefined);
 
 const mainBundler = new Parcel({
   entries: main,
