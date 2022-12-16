@@ -6,13 +6,32 @@ import { join } from "path";
 
 const manifest: Theme = _manifest;
 
-const main = manifest.main || (existsSync("main.css") ? "main.css" : undefined);
+const main = manifest.main || "main.css";
 const splash = manifest.splash || (existsSync("splash.css") ? "splash.css" : undefined);
 
-const bundler = new Parcel({
-  entries: [main, splash].filter(Boolean) as string[],
+const mainBundler = new Parcel({
+  entries: main,
   defaultConfig: "@parcel/config-default",
+  targets: {
+    main: {
+      distDir: "dist",
+      distEntry: "main.css",
+    },
+  },
 });
+
+const splashBundler = splash
+  ? new Parcel({
+      entries: splash,
+      defaultConfig: "@parcel/config-default",
+      targets: {
+        main: {
+          distDir: "dist",
+          distEntry: "splash.css",
+        },
+      },
+    })
+  : undefined;
 
 const REPLUGGED_FOLDER_NAME = "replugged";
 export const CONFIG_PATH = (() => {
@@ -40,7 +59,7 @@ async function install() {
   }
 }
 
-async function build() {
+async function build(bundler: Parcel) {
   try {
     const { bundleGraph, buildTime } = await bundler.run();
     let bundles = bundleGraph.getBundles();
@@ -51,7 +70,7 @@ async function build() {
   }
 }
 
-async function watch() {
+async function watch(bundler: Parcel) {
   const subscription = await bundler.watch(async (err, event) => {
     if (err) {
       // fatal error
@@ -71,14 +90,11 @@ async function watch() {
 
 const shouldWatch = process.argv.includes("--watch");
 
-if (shouldWatch) {
-  watch();
-} else {
-  build();
-}
+const fn = shouldWatch ? watch : build;
+[mainBundler, splashBundler].filter(Boolean).forEach((bundler) => fn(bundler!));
 
-manifest.main = main?.replace(/\.scss$/, ".css");
-manifest.splash = splash?.replace(/\.scss$/, ".css");
+manifest.main = "main.css";
+manifest.splash = splash ? "splash.css" : undefined;
 
 if (!existsSync("dist")) {
   mkdirSync("dist");
