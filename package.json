@@ -9,7 +9,7 @@
     "build": "tsx scripts/build.ts",
     "watch": "tsx scripts/build.ts --watch",
     "bundle": "tsx scripts/bundle.ts",
-    "build-and-bundle": "NO_INSTALL=true pnpm run build && pnpm run bundle",
+    "build-and-bundle": "pnpm run build --no-install && pnpm run bundle",
     "lint": "prettier ./src ./scripts --check",
     "lint:fix": "prettier ./src ./scripts --write"
   },

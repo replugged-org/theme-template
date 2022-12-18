@@ -49,7 +49,7 @@ export const CONFIG_PATH = (() => {
 })();
 
 async function install() {
-  if (!process.env.NO_INSTALL) {
+  if (!process.argv.includes("--no-install")) {
     const dest = join(CONFIG_PATH, "themes", manifest.id);
     if (existsSync(dest)) {
       rmSync(dest, { recursive: true });
