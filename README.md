@@ -67,5 +67,5 @@ Replugged.
 Check the [theme folder](https://github.com/replugged-org/replugged#installing-plugins-and-themes)
 for your OS and make sure the theme is there. If not, make sure you have built the theme and that
 the `NO_INSTALL` environment variable is not set.  
-You can run `replugged.themes.list().then(console.log)` in the console to see a list of themes in
+You can run `await replugged.themes.list()` in the console to see a list of themes in
 the theme folder.
