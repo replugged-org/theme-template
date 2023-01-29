@@ -10,8 +10,8 @@
     "watch": "replugged build theme --watch",
     "bundle": "replugged bundle",
     "build-and-bundle": "replugged build theme --no-install && replugged bundle",
-    "lint": "prettier ./src ./scripts --check",
-    "lint:fix": "prettier ./src ./scripts --write"
+    "lint": "prettier ./src --check",
+    "lint:fix": "prettier ./src --write"
   },
   "keywords": [],
   "author": "",
