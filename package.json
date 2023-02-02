@@ -8,7 +8,7 @@
   "scripts": {
     "build": "replugged build theme",
     "watch": "replugged build theme --watch",
-    "bundle": "replugged build theme --no-install --production && replugged bundle",
+    "bundle": "replugged bundle theme",
     "lint": "prettier ./src --check",
     "lint:fix": "prettier ./src --write"
   },
@@ -20,6 +20,6 @@
     "@parcel/core": "^2.8.3",
     "@types/node": "^18.11.15",
     "prettier": "^2.8.1",
-    "replugged": "^4.0.0-beta0.1"
+    "replugged": "4.0.0-beta0.22"
   }
 }
