@@ -5,14 +5,14 @@ specifiers:
   '@parcel/core': ^2.8.3
   '@types/node': ^18.11.15
   prettier: ^2.8.1
-  replugged: 4.0.0-beta0.26
+  replugged: 4.0.0
 
 devDependencies:
   '@parcel/config-default': 2.8.3_@parcel+core@2.8.3
   '@parcel/core': 2.8.3
   '@types/node': 18.11.15
   prettier: 2.8.1
-  replugged: 4.0.0-beta0.26
+  replugged: 4.0.0
 
 packages:
 
@@ -2197,8 +2197,8 @@ packages:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
     dev: true
 
-  /replugged/4.0.0-beta0.26:
-    resolution: {integrity: sha512-aszVAXHdpKs49N5eTnB0+I9QQ6P/4eftRjywU/mFK4uD5pl/TYpYBNGcZnCNqKTvs5VzvvbcVz7LYZVuXOYPKQ==}
+  /replugged/4.0.0:
+    resolution: {integrity: sha512-3wTTk1tK821RNku4mQsdKTbj/hpiNN8253pTELSJ3Jn3NZNXjVTugk7+ZmMGEfrHlxmRWADCwd62JvwZ2MvNMA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
