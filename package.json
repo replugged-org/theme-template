@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A theme template",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
   },
   "scripts": {
     "build": "replugged build theme",
@@ -20,6 +21,6 @@
     "@parcel/core": "^2.8.3",
     "@types/node": "^18.11.15",
     "prettier": "^2.8.1",
-    "replugged": "^4.2.1"
+    "replugged": "^4.2.3"
   }
 }
