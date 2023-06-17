@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 devDependencies:
   '@parcel/config-default':
@@ -14,8 +18,8 @@ devDependencies:
     specifier: ^2.8.7
     version: 2.8.7
   replugged:
-    specifier: ^4.2.3
-    version: 4.2.3(@codemirror/view@6.9.3)(@lezer/common@1.0.2)
+    specifier: ^4.4.2
+    version: 4.4.2(@codemirror/view@6.9.3)(@lezer/common@1.0.2)
 
 packages:
 
@@ -126,6 +130,7 @@ packages:
   /@electron/asar@3.2.3:
     resolution: {integrity: sha512-wmOfE6szYyqZhRIiLH+eyZEp+bGcJI0OD/SCvSUrfBE0jvauyGYO2ZhpWxmNCcDojKu5DYrsVqT5BOCZZ01XIg==}
     engines: {node: '>=10.12.0'}
+    hasBin: true
     dependencies:
       chromium-pickle-js: 0.2.0
       commander: 5.1.0
@@ -1801,6 +1806,7 @@ packages:
   /esbuild@0.16.17:
     resolution: {integrity: sha512-G8LEkV0XzDMNwXKgM0Jwu3nY3lSTwSGY6XbxM9cr9+s0T/qSV1q1JVPBGzm3dcjhCic9+emZDmMffkwgPeOeLg==}
     engines: {node: '>=12'}
+    hasBin: true
     requiresBuild: true
     optionalDependencies:
       '@esbuild/android-arm': 0.16.17
@@ -2074,6 +2080,7 @@ packages:
 
   /is-ci@3.0.1:
     resolution: {integrity: sha512-ZYvCgrefwqoQ6yTyYUbQu64HsITZ3NfKX1lzaEYdkTDcfKzzCI/wthRRYKkdjHKFVgNiXKAKm65Zo1pk2as/QQ==}
+    hasBin: true
     dependencies:
       ci-info: 3.8.0
     dev: true
@@ -2534,6 +2541,7 @@ packages:
 
   /rc@1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
+    hasBin: true
     dependencies:
       deep-extend: 0.6.0
       ini: 1.3.8
@@ -2575,9 +2583,10 @@ packages:
       rc: 1.2.8
     dev: true
 
-  /replugged@4.2.3(@codemirror/view@6.9.3)(@lezer/common@1.0.2):
-    resolution: {integrity: sha512-11X9a07lf1CqEqEbM6Clw7I+jMnSkH1v1ZEVtM7XBFbyFNqThCKiSTuN4VaG7MoFi0smyxsfozL5wzCvL8a61w==}
-    engines: {node: '>=14.0.0'}
+  /replugged@4.4.2(@codemirror/view@6.9.3)(@lezer/common@1.0.2):
+    resolution: {integrity: sha512-aQA9aU7vHUly1+IvJvNTw13rfmJYgSm6CzBh9UZbYBzzRJN3OF+TwJQ55LNrFBzeNdJFrAeG2UYCXciX9Anarg==}
+    engines: {node: '>=18.0.0', pnpm: '>=8.0.0'}
+    hasBin: true
     dependencies:
       '@codemirror/lang-css': 6.1.1(@codemirror/view@6.9.3)(@lezer/common@1.0.2)
       '@codemirror/language': 6.6.0
@@ -2595,11 +2604,13 @@ packages:
       node-fetch: 3.3.1
       standalone-electron-types: 1.0.0
       update-notifier: 6.0.2
+      ws: 8.13.0
       yargs: 17.7.1
       zod: 3.21.4
     transitivePeerDependencies:
       - '@codemirror/view'
       - '@lezer/common'
+      - bufferutil
       - cssnano
       - encoding
       - postcss
@@ -2608,6 +2619,7 @@ packages:
       - srcset
       - terser
       - uncss
+      - utf-8-validate
     dev: true
 
   /require-directory@2.1.1:
@@ -2638,6 +2650,7 @@ packages:
   /sass@1.60.0:
     resolution: {integrity: sha512-updbwW6fNb5gGm8qMXzVO7V4sWf7LMXnMly/JEyfbfERbVH46Fn6q02BX7/eHTdKpE7d+oTkMMQpFWNUMfFbgQ==}
     engines: {node: '>=12.0.0'}
+    hasBin: true
     dependencies:
       chokidar: 3.5.3
       immutable: 4.3.0
@@ -2658,6 +2671,7 @@ packages:
   /semver@7.3.8:
     resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
     engines: {node: '>=10'}
+    hasBin: true
     dependencies:
       lru-cache: 6.0.0
     dev: true
@@ -2829,6 +2843,7 @@ packages:
 
   /update-browserslist-db@1.0.10(browserslist@4.21.5):
     resolution: {integrity: sha512-OztqDenkfFkbSG+tRxBeAnCVPckDBcvibKd35yDONx6OU8N7sqgwc7rCbkJ/WcYtVRZ4ba68d6byhC21GFh7sQ==}
+    hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
@@ -2922,6 +2937,19 @@ packages:
       is-typedarray: 1.0.0
       signal-exit: 3.0.7
       typedarray-to-buffer: 3.1.5
+    dev: true
+
+  /ws@8.13.0:
+    resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
     dev: true
 
   /xdg-basedir@5.1.0:
