@@ -13,6 +13,7 @@
     "id": "replugged-org/theme-template"
   },
   "license": "MIT",
+  "source": "https://github.com/replugged-org/theme-template",
   "type": "replugged-theme",
   "main": "src/main.css"
 }
