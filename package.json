@@ -10,6 +10,7 @@
     "build": "replugged build theme",
     "watch": "replugged build theme --watch",
     "bundle": "replugged bundle theme",
+    "release": "replugged release",
     "lint": "prettier ./src --check",
     "lint:fix": "prettier ./src --write"
   },
@@ -19,8 +20,8 @@
   "devDependencies": {
     "@parcel/config-default": "^2.9.3",
     "@parcel/core": "^2.9.3",
-    "@types/node": "^18.17.1",
+    "@types/node": "^18.17.6",
     "prettier": "^2.8.8",
-    "replugged": "^4.5.1"
+    "replugged": "^4.6.0"
   }
 }
