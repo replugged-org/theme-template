@@ -4,7 +4,7 @@
   "description": "A theme template",
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=8.0.0"
+    "pnpm": ">=9.0.0"
   },
   "scripts": {
     "build": "replugged build theme",
@@ -18,8 +18,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.0",
-    "prettier": "^3.2.2",
-    "replugged": "^4.7.7"
+    "@types/node": "^20.14.10",
+    "prettier": "^3.3.2",
+    "replugged": "^4.8.1"
   }
 }
