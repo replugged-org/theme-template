@@ -2,10 +2,12 @@
   "name": "theme-template",
   "version": "1.0.0",
   "description": "A theme template",
+  "license": "ISC",
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
+    "pnpm": ">=10.0.0"
   },
+  "author": "",
   "scripts": {
     "build": "replugged build theme",
     "watch": "replugged build theme --watch",
@@ -14,12 +16,9 @@
     "lint": "prettier ./src --check",
     "lint:fix": "prettier ./src --write"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.14.10",
-    "prettier": "^3.3.2",
-    "replugged": "^4.8.1"
+    "@types/node": "^20.17.25",
+    "prettier": "^3.5.3",
+    "replugged": "^4.8.4"
   }
 }
