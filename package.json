@@ -17,8 +17,8 @@
     "lint:fix": "prettier ./src --write"
   },
   "devDependencies": {
-    "@types/node": "^20.17.25",
+    "@types/node": "^20.17.30",
     "prettier": "^3.5.3",
-    "replugged": "^4.8.4"
+    "replugged": "^4.9.0"
   }
 }
